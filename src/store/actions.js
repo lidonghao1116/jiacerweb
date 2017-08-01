@@ -5,14 +5,15 @@ import * as types from './types'
 
 export default {
   /*底部条*/
-  hideFooter:({commit})=>{
+  hideFooter: ({commit}) => {
     commit(types.FOOTER_HIDE);
   },
-  showFooter:({commit})=>{
+  showFooter: ({commit}) => {
     commit(types.FOOTER_SHOW)
   },
 //  修改头部内容
-  headCtn:({commit})=>{
-    commit(changeHead)
+  headCtn: ({commit}, payload) => {
+    console.log(payload)
+    commit('headCtn',payload)
   }
 }

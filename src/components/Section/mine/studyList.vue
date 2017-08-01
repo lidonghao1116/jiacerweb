@@ -2,12 +2,8 @@
   <div>
     <div class="page-group">
       <div id="page-home" class="page page-current" >
-        <header>
-          <a class="goBack" href="mine.html"></a>
-          <h1><i>家策商学院</i></h1>
-        </header>
         <div class="content">
-          <!-- <ul class="study_list_box">
+           <ul class="study_list_box">
             <li class="study_list">
               <div class="study_list_pannel">
                 <h2>高级育婴师</h2>
@@ -19,7 +15,7 @@
                 <span class="status daibao">立即报名</span>
               </div>
             </li>
-          </ul> -->
+          </ul>
         </div>
       </div>
     </div>

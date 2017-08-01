@@ -6,12 +6,7 @@ import {
   FOOTER_SHOW
 } from './types'
 
-const state={
-  footerShow:true,
-  courseName:"在线学堂"
-};
-
-const mutations={
+export default {
   /*footer*/
   [FOOTER_HIDE](state){
     state.footerShow=false;
@@ -21,19 +16,8 @@ const mutations={
     state.footerShow=true;
     console.log(state.footerShow)
   },
-  changeHead(state){
-    alert(state.courseName);
+  headCtn(state,payload){
+    state.headerTitle=payload.name;
+    console.log(payload.name);
   }
-}
-
-const getters={
-  footerShow(state){
-    return state.footerShow;
-  }
-}
-
-export default {
-  state,
-  mutations,
-  getters
 }
