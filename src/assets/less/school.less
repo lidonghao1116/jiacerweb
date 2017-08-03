@@ -1,101 +1,98 @@
 @import "common";
 
-body {
-  background-color: #FFFFFF !important;
-}
-
-.courseTab {
-  display: flex;
-  display: -webkit-flex;
-  justify-content: center;
-  height: .84rem;
-  border-bottom: 1px solid #DCDCDC;
-  background-color: #FFFFFF;
-  a{
-    flex: 1;
-    display: block;
-    font-size: .3rem;
-    color: #999999;
-    text-align: center;
-    line-height: .84rem;
+#sectionView {
+  .courseTab {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    height: .84rem;
+    border-bottom: 1px solid #DCDCDC;
+    background-color: #FFFFFF;
+    a {
+      flex: 1;
+      display: block;
+      font-size: .3rem;
+      color: #999999;
+      text-align: center;
+      line-height: .84rem;
+    }
+    .ct-on {
+      color: #333333;
+      font-size: 1.6rem;
+    }
   }
-  .ct-on {
-    color: #333333;
-    font-size: 1.6rem;
-  }
-}
-
-
-.courseList {
-  padding: 0 .2rem;
-  background-color: #FFFFFF;
-  ul{
-    li{
-      height: 2.6rem;
-      border-bottom: .01rem solid #DCDCDC;
-      padding: .36rem 0;
-      position: relative;
-      img {
-        width: 1.62rem;
-        height: 2.08rem;
-        position: absolute;
-        left: 0;
-        top: .36rem;
-      }
-      .cl-content {
-        padding-left: 2rem;
-        h1{
-          font-size: .32rem;
-          margin-bottom: .14rem;
-          p{
+  .courseList {
+    padding: 0 .2rem;
+    background-color: #FFFFFF;
+    ul {
+      li {
+        height: 2.6rem;
+        border-bottom: .01rem solid #DCDCDC;
+        padding: .36rem 0;
+        position: relative;
+        img {
+          width: 1.62rem;
+          height: 2.08rem;
+          position: absolute;
+          left: 0;
+          top: .36rem;
+        }
+        .cl-content {
+          padding-left: 2rem;
+          h1 {
             font-size: .32rem;
-            float: left;
+            margin-bottom: .14rem;
+            p {
+              font-size: .32rem;
+              float: left;
+            }
+            span {
+              font-size: .28rem;
+              float: right;
+              color: #F8510A;
+            }
           }
-          span{
+          .clc1 {
+            color: #666;
+            margin-bottom: .32rem;
             font-size: .28rem;
-            float: right;
-            color: #F8510A;
           }
-        }
-        .clc1 {
-          color: #666;
-          margin-bottom: .32rem;
-          font-size: .28rem;
-        }
-        .clc2 {
-          margin-bottom: .32rem;
+          .clc2 {
+            margin-bottom: .32rem;
+            span {
+              color: #999999;
+              font-size: .24rem;
+            }
+          }
+          .clc3 {
+            label {
+              background-color: #FFFFFF;
+              color: @baseDk;
+            }
+          }
+          label {
+            display: inline-block;
+            height: .28rem;
+            line-height: .28rem;
+            border: .01rem solid @baseDk;
+            background-color: @baseDk;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 0 .1rem;
+            font-size: .2rem;
+            border-radius: 1rem;
+          }
           span {
-            color: #999999;
             font-size: .24rem;
           }
-        }
-        .clc3  {
-          label{
-            background-color: #FFFFFF;
-            color: @baseDk;
-          }
-        }
-        label{
-          display: inline-block;
-          height: .28rem;
-          line-height:.28rem;
-          border: .01rem solid @baseDk;
-          background-color: @baseDk;
-          color: #FFFFFF;
-          text-align: center;
-          padding: 0 .1rem;
-          font-size: .2rem;
-          border-radius: 1rem;
-        }
-        span{
-          font-size: .24rem;
         }
       }
     }
   }
+
+  #recommendCourse {
+    display: none
+  }
 }
 
-#recommendCourse {
-  display: none
-}
 

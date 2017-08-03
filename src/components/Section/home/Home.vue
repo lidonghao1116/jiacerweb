@@ -12,11 +12,12 @@
 <style lang="less" rel="stylesheet/less" scoped>
   .router-link-active{
     font-size: .32rem !important;
-    color: #ff7f3a;
-    font-weight: bold;
+    color: #ff7f3a!important;
+    font-weight: bold!important;
   }
 </style>
 <script>
+  import * as cm from  '../../../assets/js/utils/common'
   import '../../../assets/less/school.less'
   export default{
     data(){

@@ -28,11 +28,11 @@
   background: rgba(0,0,0,.8);
   border-radius: 0;
   color: #fff!important;
-  padding: 0 1.7rem;
-  height: 3.4rem;
-  line-height: 3.4rem;
-  font-size: 1.4rem;
-  border-radius: 1.7rem;
+  padding: 0 .34rem;
+  height: .68rem;
+  line-height: .68rem;
+  font-size: .28rem;
+  border-radius: .34rem;
   width: auto;
   z-index: 9999999;
 }

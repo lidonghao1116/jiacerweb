@@ -1,49 +1,80 @@
 <template>
   <div class="courseContent" id="videoList">
     <ul class="vl-district">
-      <li>
-        <h1>第一考区：孕产妇护理</h1>
-        <ul class="vl-subdivision spli1">
-
+      <li v-for="(item,index) in itemList">
+        <!--<h1></h1>-->
+        <ul class="vl-subdivision" :class="'spli'+index">
+          <li :data-id="item.id" @click="watchVideo($event)" :data-nowatch="item.isGuestWatch">
+            <p>{{item.videoDesc}}</p>
+            <a href="#" v-if="item.isGuestWatch==1">试看</a>
+            <a v-else="item.isGuestWatch==0" class="play" href="#"></a>
+          </li>
         </ul>
       </li>
-      <li>
-        <h1>第二考区：婴儿生活护理与意外事故预防急救</h1>
-        <ul class="vl-subdivision spli2"></ul>
-      </li>
-      <li>
-        <h1>第三考区：营养与防病</h1>
-        <ul class="vl-subdivision spli3">
-
-        </ul>
-      </li>
-      <!--<li>
-        <h1>第一考区：孕产妇护理</h1>
-        <ul class="vl-subdivision">
-          <li>1.1.1 孕妇体操指导</li>
-          <li>1.1.1 孕妇体操指导</li>
-          <li>1.1.1 孕妇体操指导</li>
-          <li>1.1.1 孕妇体操指导</li>
-          <li>1.1.1 孕妇体操指导</li>
-        </ul>
-      </li>
-      <li>
-        <h1>第二考区：婴儿生活护理与意外事故预防急救</h1>
-        <ul class="vl-subdivision">
-          <li>1.1.1 孕妇体操指导</li>
-          <li>1.1.1 孕妇体操指导</li>
-          <li>1.1.1 孕妇体操指导</li>
-          <li>1.1.1 孕妇体操指导</li>
-          <li>1.1.1 孕妇体操指导</li>
-        </ul>
-      </li>-->
     </ul>
   </div>
 </template>
 <style lang="less" rel="stylesheet/less" scoped>
 </style>
 <script>
-  export default{
+  import * as cm from  '../../../assets/js/utils/common'
 
+  export default{
+    data(){
+      return {
+        itemList: [],
+        isPlay:true
+      }
+    },
+    mounted(){
+      $('.courseContent').css("top", 300 + 'px');
+      this.fetchVideo()
+    },
+    methods: {
+      fetchVideo(){
+        let _this = this;
+        var req = {
+          url: '/data/video.json?courseId=' + this.courseId,
+          methods: 'get',
+          headers: {
+            'wx-openid': cm.params.wxid,
+            'invite-code': cm.params.inid,
+          },
+          withCredentials:true,
+        }
+        this.$http(req).then(function (res) {
+          _this.itemList=res.data.jsonData;
+          console.log(_this.itemList)
+        }).catch((err) => console.log(err))
+      },
+      initSPPage(data){
+        console.log(data)
+        var i = 0;
+        $('.vl-district li').html('hahahha')
+      },
+      watchVideo(e){
+        var el=e.currentTarget;
+        if (cm.isEmpty(cm.params.wxid)||$.trim(cm.params.wxid)=="null"){
+          $.toast('请在微信中观看')
+          return;
+        }
+        else if ($(el).data('nowatch')==0){
+          $.toast('本视频需购买后才能正常观看')
+          return;
+        }
+        $(".courseImg").hide();
+        $(".courseVideo").show();
+        let play={};
+        var id=$(el).data('id');
+        console.log(id)
+        var player = new qcVideo.Player("courseVideo", {
+          "file_id": id,
+          "app_id": "1254037450",
+          "width":'375',
+          "height":'178'
+        });
+      },
+    },
+    props: ['courseId', 'isOwn']
   }
 </script>

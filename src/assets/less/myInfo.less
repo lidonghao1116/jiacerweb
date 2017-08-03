@@ -1,0 +1,80 @@
+@import "common";
+
+#myInfo {
+  .my_info_box {
+    padding: 0 .3rem;
+    background-color: #fff;
+    margin-top: .24rem;
+    .my_info {
+      height: .96rem;
+      &:not(:last-child) {
+        border-bottom: .01rem solid #f0f0f0;
+      }
+      label {
+        padding: .28rem 0;
+        float: left;
+        width: 1.5rem;
+        display: block;
+        line-height: .4rem;
+        font-size: .3rem;
+        color: #808080;
+      }
+    }
+    .img_info {
+      label {
+        padding: .4rem 0;
+        float: left;
+        width: 1.5rem;
+        display: block;
+        line-height: .4rem;
+        font-size: .3rem;
+        color: #808080;
+      }
+      .info_right {
+        height: 1.2rem;
+        padding: 0 0 0 1.4rem;
+        img {
+          width: .84rem;
+          height: .84rem;
+          display: inline-block;
+          margin-top: .18rem;
+          /*border-radius: 100%;*/
+        }
+      }
+    }
+  }
+
+  .info_right {
+    padding: .28rem 1.4rem;
+    line-height: .4rem;
+    position: relative;
+    font-size: .3rem;
+    input {
+      display: none;
+      line-height: .4rem;
+      width: 90%;
+      -webkit-appearance: none;
+      border: none;
+      font-size: .28rem;
+    }
+    a {
+      position: absolute;
+      right: 0;
+      font-size: .28rem;
+      color: #ff7f3a;
+      display: block;
+      height: .56rem;
+      line-height: .56rem;
+      text-align: right;
+      top: .2rem;
+    }
+  }
+
+  .border_n {
+    border-bottom: 0;
+  }
+
+  #inviteCode {
+    color: #dbdbdb;
+  }
+}

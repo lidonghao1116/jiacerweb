@@ -1,5 +1,4 @@
 #course {
-
   body {
     background-color: #FFFFFF !important;
   }
@@ -98,19 +97,7 @@
     border-radius: 10px;
   }
   /*课程详情*/
-  .shareRedPacket {
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    font-size: 1rem;
-    display: block;
-    height: 2.6rem;
-    margin-top: -1.3rem;
-    background: url(/statics/img/redpacket.png) no-repeat;
-    background-position: left center;
-    background-size: 2.35rem 2rem;
-    padding-left: 2.8rem;
-  }
+
   .courseImg img {
     width: 100%;
     height: auto;
@@ -140,38 +127,37 @@
     color: #FF7F3A;
   }
   .courseFoot {
-    height: 3.6rem;
     background-color: #F7F7F7;
-    padding: 1.2rem 0;
-    position: absolute;
+    padding: .24rem 0;
+    position: fixed;
     bottom: 0;
     width: 100%;
-    border-top: 1px solid #E3E3E3;
-  }
-  .courseFoot .cf-btn {
-    width: 82%;
-    margin: 0 auto;
-  }
-  .courseFoot .cf-btn a {
-    display: block;
-    height: 100%;
-    width: 12.9rem;
-    line-height: 3.6rem;
-    text-align: center;
-    font-size: 1.5rem;
-    border-radius: 5px;
-    background-color: #FFFFFF;
-  }
-  .courseFoot .cf-btn .cfb-left {
-    float: left;
-    border: 1px solid #FF7F3A;
-    color: #ff7f3a;
-  }
-  .courseFoot .cf-btn .cfb-right {
-    float: right;
-    color: #fff;
-    border: 1px solid #FF7F3A;
-    background: #ff7f3a;
+    border-top: .05rem solid #E3E3E3;
+    .cf-btn {
+      width: 82%;
+      margin: 0 auto;
+      a {
+        display: block;
+        height: 100%;
+        width: 2.6rem;
+        line-height: .72rem;
+        text-align: center;
+        font-size: .3rem;
+        border-radius: .1rem;
+        background-color: #FFFFFF;
+      }
+      .cfb-left {
+        float: left;
+        border: .05rem solid #FF7F3A;
+        color: #ff7f3a;
+      }
+      .cfb-right {
+        float: right;
+        color: #fff;
+        border: .05rem solid #FF7F3A;
+        background: #ff7f3a;
+      }
+    }
   }
   /*在线视频*/
   .courseContent {
@@ -182,58 +168,60 @@
     overflow: auto;
     border-top: 1px solid #DCDCDC;
   }
-  #videoList .vl-district li h1 {
-    background-color: #F7F7F7;
-    height: .84rem;
-    line-height: .84rem;
-    font-size: .3rem;
-    padding: 0 .3rem;
-    position: -webkit-sticky;
-    position: -moz-sticky;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    font-weight: bold;
+  .vl-district {
+    li {
+      font-size: .3rem;
+    }
   }
-  #videoList .vl-district li .vl-subdivision {
-    background-color: #FFFFFF;
-    padding: 0 .2rem;
-  }
-  #videoList .vl-district li .vl-subdivision li {
-    position: relative;
-    height: 4.2rem;
-    line-height: 4.2rem;
-    font-size: 1.4rem;
-    border-bottom: 1px solid #f0f0f0;
-    padding: 0 .5rem;
-  }
-  #videoList .vl-district li .vl-subdivision li p {
-    padding-right: 6rem;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-  ul.vl-subdivision li a {
-    float: right;
-    color: #808080;
-    font-size: 1.2rem;
-    position: absolute;
-    right: 0.6rem;
-    top: 0;
-  }
-  ul.vl-subdivision li a.play {
-    width: 1.8rem;
-    height: 100%;
-    background: url(/statics/img/playbtn.png) no-repeat;
-    background-size: 1.7rem;
-    background-position: center;
-  }
-  ul.vl-subdivision li a.noplay {
-    width: 1.8rem;
-    height: 100%;
-    background: url(/statics/img/playbtn.png) no-repeat;
-    background-size: 1.7rem;
-    background-position: center;
+  #videoList .vl-district li {
+    h1 {
+      background-color: #F7F7F7;
+      height: .84rem;
+      line-height: .84rem;
+      font-size: .3rem;
+      padding: 0 .3rem;
+      position: -webkit-sticky;
+      position: -moz-sticky;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      font-weight: bold;
+    }
+    .vl-subdivision {
+      background-color: #FFFFFF;
+      padding: 0 .2rem;
+      li {
+        position: relative;
+        height: .84rem;
+        line-height: .84rem;
+        font-size: .28rem;
+        border-bottom: 1px solid #f0f0f0;
+        padding: 0 .1rem;
+        p {
+          padding-right: .12rem;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+        a {
+          float: right;
+          color: #808080;
+          font-size: .24rem;
+          position: absolute;
+          right: 0.12rem;
+          top: 0;
+          height: 100%;
+          background-size: .34rem;
+          background-position: center;
+        }
+        a.play {
+          width: .36rem;
+          background: url(/statics/img/playbtn.png) no-repeat;
+          background-size: .36rem;
+          background-position: center;
+        }
+      }
+    }
   }
   /*#videoList .vl-district li .vl-subdivision li img {
     width: 1.8rem;

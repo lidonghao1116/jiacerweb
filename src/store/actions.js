@@ -13,7 +13,7 @@ export default {
   },
 //  修改头部内容
   headCtn: ({commit}, payload) => {
-    console.log(payload)
+    // console.log(payload)
     commit('headCtn',payload)
   }
 }

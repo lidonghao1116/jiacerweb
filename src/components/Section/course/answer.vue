@@ -20,8 +20,7 @@
 </style>
 <script>
   import {formateData} from '../../../assets/js/filters/formateData'
-  var wx_openid = localStorage.getItem('wx-openid');
-  var invite_code = localStorage.getItem('invite-code');
+  import * as cm from  '../../../assets/js/utils/common'
 
   export default{
     data(){
@@ -30,16 +29,17 @@
       }
     },
     mounted(){
+      $('.courseContent').css("top", 300 + 'px');
       this.fetchData()
     },
     methods: {
       fetchData(){
         let _this = this;
         var req = {
-          url: '/src/data/info.json',
+          url: '/data/info.json',
           methods: 'get',
           headers: {
-            'wx-openid': wx_openid,
+            'wx-openid': cm.params.wxid,
           },
         }
         this.$http(req).then(function (res) {

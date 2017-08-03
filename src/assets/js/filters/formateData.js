@@ -1,4 +1,4 @@
-import * as common from '../utils/common'
+import * as common from '../../../assets/js/utils/common'
 
 export function formateData(value) {
     value=common.isEmpty(value) ? null : value.indexOf('.') == -1 ? value.replace(/0/, "") + ".0" : value;

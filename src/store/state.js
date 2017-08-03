@@ -3,5 +3,8 @@
  */
 export default {
   footerShow:true,
-  headerTitle:"在线学堂"
+  headerTitle:"在线学堂",
+  isBack:true,
+  isShare:false,
+  isLogo:false
 }

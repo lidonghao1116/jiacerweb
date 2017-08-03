@@ -1,5 +1,5 @@
-@baseColor:#FF7F3A;
-@baseDk:#F2A300;
+@baseColor: #FF7F3A;
+@baseDk: #F2A300;
 
 a {
   color: #333;
@@ -56,7 +56,7 @@ body {
 /*头部*/
 header {
   position: fixed;
-  top:0;
+  top: 0;
   height: .88rem;
   font-size: .32rem;
   background-color: #FFFFFF;
@@ -68,6 +68,15 @@ header h1 {
   text-align: center;
   line-height: .88rem;
   font-size: .32rem;
+  i {
+    display: inline-block;
+    width: .36rem;
+    height: .36rem;
+    background: url("/statics/img/logo.png") no-repeat center center;
+    background-size: .36rem;
+    vertical-align: sub;
+    margin-right: .12rem;
+  }
 }
 
 /*上一页*/
@@ -82,6 +91,7 @@ header .goBack {
   left: .3rem;
   top: 0;
 }
+
 .clearfix:after {
   content: ".";
   display: block;
@@ -89,6 +99,7 @@ header .goBack {
   clear: both;
   visibility: hidden;
 }
+
 /*底部*/
 footer {
   border-top: 1px solid #E6E6E6;
@@ -104,7 +115,7 @@ footer {
   z-index: 10;
   box-sizing: border-box;
   padding: .12rem 0;
-  a{
+  a {
     flex: 1;
     display: block;
     background-position: top center;
@@ -135,7 +146,7 @@ footer :active {
 footer .school {
   background-image: url(/statics/img/school1.png);
   background-size: auto .36rem;
-  background-position:  center .04rem;
+  background-position: center .04rem;
 }
 
 footer .mine {
@@ -144,21 +155,36 @@ footer .mine {
 }
 
 .no_info {
-  padding-top: 12rem;
-  font-size: 1.2rem;
+  padding-top: 2.4rem;
+  font-size: .24rem;
   color: #808080;
   text-align: center;
   background: url(/statics/img/wushuju.png) no-repeat;
   background-position: top center;
-  background-size: 10rem;
-  margin-top: 5rem;
+  background-size: 2rem;
+  margin-top: 1rem;
 }
 
-.mineActive{
-  background-image: url(/statics/img/mine2.png)!important;
-  color: @baseColor!important;
+.mineActive {
+  background-image: url(/statics/img/mine2.png) !important;
+  color: @baseColor !important;
 }
-.schoolActive{
+
+.schoolActive {
   background-image: url(/statics/img/school2.png) !important;
-  color: @baseColor!important;
+  color: @baseColor !important;
+}
+
+.shareRedPacket {
+  position: absolute;
+  right: .2rem;
+  top: 50%;
+  font-size: .2rem;
+  display: block;
+  height: .52rem;
+  margin-top: -.26rem;
+  background: url(/statics/img/redpacket.png) no-repeat;
+  background-position: left center;
+  background-size: .47rem .4rem;
+  padding-left: .56rem;
 }

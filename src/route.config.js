@@ -13,6 +13,8 @@ import myInfo from './components/Section/mine/myInfo.vue'
 import studyList from './components/Section/mine/studyList.vue'
 import trainRecord from './components/Section/mine/trainRecord.vue'
 import completeInfo from './components/Section/mine/completeInfo.vue'
+import Register from './components/Section/register/register.vue'
+import Agreement from './components/Section/register/agreement.vue'
 
 Vue.use(VueRouter)
 
@@ -56,6 +58,12 @@ const router = new VueRouter({
         },
         {
           path: '/trainRecord', component: trainRecord,
+        },
+        {
+          path: '/register', component: Register,
+        },
+        {
+          path: '/agreement', component: Agreement,
         },
         {
           path: '/course/courseId=:courseId', component: Course,

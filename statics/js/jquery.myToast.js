@@ -103,8 +103,6 @@ $.openModal = function (modal, cb) {
     });
   }
   if (isToast) {
-    console.log(modal);
-    console.log(modal[0].offsetWidth);
     modal.css({
       marginLeft: - Math.round(modal[0].offsetWidth / 2) + 'px' //1.185 是初始化时候的放大效果
     });
