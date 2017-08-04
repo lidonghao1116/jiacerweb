@@ -99,7 +99,7 @@ $.openModal = function (modal, cb) {
     modal.show();
     modal.css({
       boxSizing: 'border-box',
-      marginTop: - Math.round(modal.outerHeight() / 2) + 'px'
+      marginTop: - Math.round(modal.offsetHeight / 2) + 'px'
     });
   }
   if (isToast) {

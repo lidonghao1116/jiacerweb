@@ -1,7 +1,7 @@
 <template>
   <div id="mine">
     <div class="top_link">
-      <p><router-link to="/myInfo"><img src=""><br/><span>查看个人详情</span></router-link></p>
+      <p><router-link to="/myInfo"><img :src="avator"><br/><span>查看个人详情</span></router-link></p>
     </div>
     <div class="mine_list">
       <router-link to="/studyList"><p><span><img src="/statics/img/iconxuexi.png"></span>学习登记</p></router-link>
@@ -21,5 +21,35 @@
   @import '../../../assets/less/mine.less';
 </style>
 <script>
-  export default{}
+  export default{
+    data(){
+      return{
+        avator:'/statics/img/touxiang.png',
+        nick:null
+      }
+    },
+    mounted(){
+      this.initWechat()
+    },
+    methods:{
+      initWechat(){
+        let _this = this;
+        console.log(111);
+        let req = {
+          url: '/data/wechatInfo.json',//window.global_config.wechat,
+          methods: 'get',
+          headers,
+          withCredentials: true,
+        }
+        _this.$http(req).then(function (res) {
+          let data = res.data.jsonData;
+            _this.avator=data.headImgUrl;
+            _this.nick=data.nick;
+            console.log(_this.avator,_this.nick)
+          localStorage.setItem('avator',_this.avator)
+          localStorage.setItem('nick',_this.nick)
+        }).catch((err) => console.log(err))
+      }
+    }
+  }
 </script>

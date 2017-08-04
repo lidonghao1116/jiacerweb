@@ -33,7 +33,7 @@ const router = new VueRouter({
         },
         {
           path: '/home', component: Home,
-          children:[
+          children: [
             {
               path: 'purchase',
               component: Purchase,
@@ -66,7 +66,9 @@ const router = new VueRouter({
           path: '/agreement', component: Agreement,
         },
         {
-          path: '/course/courseId=:courseId', component: Course,
+          path: '/course/courseId=:courseId',
+          component: Course,
+          name: 'course'
         },
       ]
     }

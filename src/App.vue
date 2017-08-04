@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <HeaderView></HeaderView>
-    <keep-alive>
+    <!--<keep-alive>-->
       <router-view></router-view>
-    </keep-alive>
+    <!--</keep-alive>-->
     <FooterView v-show="footerShow"></FooterView>
   </div>
 </template>
@@ -22,9 +22,6 @@
     mounted(){
       let path = this.$route.path.substring(1);
       this.footerChange(path);
-    },
-    mounted(){
-
     },
     watch: {
       $route(to){
@@ -77,5 +74,4 @@
 </script>
 
 <style>
-  /*@import "./assets/less/schoolShare.less";*/
 </style>

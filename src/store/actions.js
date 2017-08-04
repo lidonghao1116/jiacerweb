@@ -15,5 +15,11 @@ export default {
   headCtn: ({commit}, payload) => {
     // console.log(payload)
     commit('headCtn',payload)
+  },
+  shareLayer:({commit})=>{
+    commit('shareLayer')
+  },
+  isLogin:({commit})=>{
+    commit('isLogin')
   }
 }

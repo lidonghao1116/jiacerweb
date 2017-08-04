@@ -6,5 +6,7 @@ export default {
   headerTitle:"在线学堂",
   isBack:true,
   isShare:false,
-  isLogo:false
+  shareRedPacket:false,
+  isLogo:false,
+  isLogin:0
 }

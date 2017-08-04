@@ -2,7 +2,7 @@
   <div id="courseLists">
     <ul>
       <li v-for="(item,index) in arrList">
-        <router-link :to="'/course/courseId='+item.courseId" @click.native="bindInfo(item)">
+        <a @click="bindInfo(item)">
           <img src="/statics/img/courses/jzfw.png">
           <div class="cl-content">
             <h1 class="clearfix">
@@ -20,7 +20,7 @@
               <span>身体护理、健康喂养</span>
             </p>
           </div>
-        </router-link>
+        </a>
       </li>
     </ul>
   </div>
@@ -36,8 +36,10 @@
         isOwn:'',
       }
     },
-    mounted(){
+    created(){
       this.fetchData();
+    },
+    mounted(){
     },
     watch: {
  /*     $route(to, from){
@@ -64,6 +66,7 @@
       },
       bindInfo(item){
         this.$store.state.headerTitle = item.courseName;
+        console.log(this.$store.state.headerTitle);
         let params = {
           price: item.price,
           courseId: item.courseId,
@@ -73,6 +76,7 @@
         };
         let str = JSON.stringify(params);
         sessionStorage.obj = str;
+        this.$router.push({ name:"course",params: { courseId: item.courseId}})
       }
     },
     props:['url','noenroll']

@@ -1,43 +1,5 @@
 var publicPath="http://"+window.location.host+"/jiacerapps";
 
-function getCourseBigImg(id){
-    id=parseInt(id);
-    var result="../img/ysb_b.png";
-    switch(id)
-    {
-        case 1:
-            result="../img/myhly_b.png";
-            break;
-        case 2:
-            result="../img/jzfw_b.png";
-            break;
-        case 3:
-            result="../img/jtyys_b.png";
-            break;
-		case 4:
-            result="../img/yyy_b.png";
-            break;
-        case 5:
-            result="../img/yyy_b.png";
-            break;
-        case 6:
-            result="../img/yyy_b.png";
-            break;
-
-        case 8:
-            result="../img/myhly_b.png";
-            break;
-        case 9:
-            result="../img/gjcrs_b.png";
-            break;
-        case 10:
-            result="../img/jpys_b.png";
-            break;
-        default:
-            result="../img/ysb_b.png";
-    }
-    return result;
-}
 $(function(){
   var browser = {
   versions: function () {
@@ -56,9 +18,6 @@ $(function(){
   if (browser.versions.android) {
       $("body").css("font-family","华文细黑");
   }
-
-
-
 })
 
 

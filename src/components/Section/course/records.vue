@@ -21,7 +21,7 @@
       }
     },
     mounted(){
-      $('.courseContent').css("top", 300 + 'px');
+      $('.courseContent').css("top", this.top + 'px');
       this.fetchScore()
     },
     methods:{
@@ -48,6 +48,6 @@
         }
       }
     },
-    props: ['courseId', 'isOwn']
+    props: ['courseId', 'isOwn','top']
   }
 </script>

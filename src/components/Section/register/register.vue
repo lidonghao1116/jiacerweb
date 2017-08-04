@@ -52,9 +52,9 @@
         smsTxt: '获取验证码',
         countDown: 5,
         params: {
-          sms: "213213",
-          phone: "15026856424",
-          imgCode:"23423"
+          sms: null,
+          phone: null,
+          imgCode:null
         }
       }
     },

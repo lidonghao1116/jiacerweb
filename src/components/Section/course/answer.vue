@@ -29,7 +29,8 @@
       }
     },
     mounted(){
-      $('.courseContent').css("top", 300 + 'px');
+      console.log(this.top)
+      $('.courseContent').css("top", this.top + 'px');
       this.fetchData()
     },
     methods: {
@@ -53,6 +54,7 @@
       formateData(value){
         return formateData(value);
       }
-    }
+    },
+    props: ['courseId', 'isOwn','top']
   }
 </script>

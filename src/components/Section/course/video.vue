@@ -27,7 +27,7 @@
       }
     },
     mounted(){
-      $('.courseContent').css("top", 300 + 'px');
+      $('.courseContent').css("top",this.top + 'px');
       this.fetchVideo()
     },
     methods: {
@@ -44,8 +44,7 @@
         }
         this.$http(req).then(function (res) {
           _this.itemList=res.data.jsonData;
-          console.log(_this.itemList)
-        }).catch((err) => console.log(err))
+        }).catch((err)=> console.log(err))
       },
       initSPPage(data){
         console.log(data)
@@ -75,6 +74,6 @@
         });
       },
     },
-    props: ['courseId', 'isOwn']
+    props: ['courseId', 'isOwn','top']
   }
 </script>

@@ -11,12 +11,14 @@
   <meta name="apple-mobile-web-app-capable" content="yes"/>
   <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
   <meta name="apple-itunes-app" content="app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL">
-  <link rel="stylesheet" href="/statics/css/jquery.mytoast.css">
-  <script src="/statics/js/jquery-3.1.1.min.js"></script>
-  <script src="/statics/js/jquery.myToast.js"></script>
-  <script src="/statics/js/jq.extend.js"></script>
+  <link rel="stylesheet" href="/statics/css/zp.mytoast.css">
+  <script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+  <script src="/statics/js/zp.myToast.js"></script>
+  <script src="/statics/js/zp.extend.js"></script>
+  <script src="/statics/js/index.js"></script>
   <script src="/statics/js/global.js"></script>
   <script src="//qzonestyle.gtimg.cn/open/qcloud/video/h5/h5connect.js" charset="utf-8"></script>
+  <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript" charset="utf-8"></script>
   <title>jiacer</title>
 </head>
 <body>
@@ -26,35 +28,14 @@
 <script>
   $(function () {
     localStorage.clear();
-    var wxId = 123;//$.getUrlParam('wx-openid');
+    var wxId = 'oC1aRuNQaqpMG9Dmr1U1LWsZDtI0';//$.getUrlParam('wx-openid');
     var invid = $.getUrlParam('invite-code');
+    var inviterCode = '213'//$.getUrlParam('inviter-code');
+    var shareCourseId = $.getUrlParam('share-courseId');
     localStorage.setItem("wx-openid", wxId);
     localStorage.setItem("invite-code", invid);
-    var req = new Request(window.global_config.userInfo, {
-      method: 'GET',
-      headers: { // headers: fetch事实标准中可以通过Header相关api进行设置
-        'wx-openid': wxId,
-//        'invite-code': invid,
-        'Content-Type': 'application/x-www-form-urlencoded',
-      }
-    })
-
-    fetch(req).then((res) => {
-      return res.json()
-    })
-        .then((data) => {
-          if (data.success) {
-            saveStorage('isLogin', 1);
-            location.href = "/pages/home.html";
-
-          } else if (data.code == 20004) {
-            saveStorage('isLogin', 0);
-            location.href = "/pages/home.html";
-          }else {
-            localStorage.setItem('isLogin',0)
-            this.$router.go('home')
-          }
-        }).catch((err) => console.log(err))
+    localStorage.setItem("inviter-code", inviterCode);
+    localStorage.setItem("share-courseId", shareCourseId);
   })
 </script>
 </html>

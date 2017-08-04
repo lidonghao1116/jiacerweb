@@ -33,5 +33,11 @@ export default {
     }else {
       state.isLogo=false;
     }
+  },
+  shareLayer(state){
+    state.shareRedPacket=!state.shareRedPacket;
+  },
+  isLogin(state){
+    state.isLogin=1;
   }
 }
